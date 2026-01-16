@@ -1,0 +1,229 @@
+/* Header */
+.roadmap-head{
+  padding: 60px 22px 18px;
+}
+
+.roadmap-head-inner{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.head-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  flex-wrap:wrap;
+}
+
+.badge{
+  display:inline-flex;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-weight: 900;
+  font-size: 12px;
+  color:#1e3a8a;
+  background: rgba(37,99,235,.10);
+  border: 1px solid rgba(37,99,235,.18);
+}
+
+/* Company hero logo */
+.company-hero{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding: 10px 12px;
+  border-radius: 18px;
+  background: rgba(255,255,255,.82);
+  border: 1px solid rgba(15,23,42,.08);
+  box-shadow: 0 16px 40px rgba(0,0,0,.07);
+}
+
+.company-logo{
+  width:46px;
+  height:46px;
+  border-radius: 18px;
+  display:grid;
+  place-items:center;
+  background: rgba(37,99,235,.10);
+  border: 1px solid rgba(37,99,235,.18);
+  overflow:hidden;
+}
+
+.company-logo img{
+  width: 75%;
+  height: 75%;
+  object-fit:contain;
+  display:block;
+}
+
+.company-text .small-muted{
+  font-size: 12px;
+  font-weight: 900;
+  color:#64748b;
+}
+
+.company-text .company-name{
+  font-size: 14px;
+  font-weight: 1000;
+  color:#0f172a;
+}
+
+.roadmap-head h1{
+  margin-top: 14px;
+  font-size: 46px;
+  line-height: 1.08;
+  letter-spacing: -0.5px;
+}
+
+.roadmap-head p{
+  margin-top: 10px;
+  color:#475569;
+  font-weight: 800;
+  max-width: 760px;
+  line-height: 1.7;
+}
+
+.meta-row{
+  margin-top: 14px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.meta-pill{
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.82);
+  border: 1px solid rgba(15,23,42,.08);
+  box-shadow: 0 16px 40px rgba(0,0,0,.06);
+  font-weight: 900;
+  color:#0f172a;
+}
+
+/* Main */
+.roadmap-page{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 22px 60px;
+}
+
+/* Tabs */
+.year-tabs{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top: 10px;
+}
+
+.tab{
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(15,23,42,.10);
+  background: rgba(255,255,255,.70);
+  font-weight: 1000;
+  cursor:pointer;
+}
+
+.tab.active{
+  background: rgba(37,99,235,.12);
+  border-color: rgba(37,99,235,.22);
+  color:#1e3a8a;
+}
+
+/* Year Panel */
+.year-panel{
+  margin-top: 12px;
+  padding: 18px;
+  border-radius: 22px;
+  background: rgba(255,255,255,.86);
+  border: 1px solid rgba(15,23,42,.08);
+  box-shadow: 0 18px 50px rgba(0,0,0,.10);
+}
+
+.year-panel-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  margin-bottom: 10px;
+}
+
+.year-title{
+  font-size: 18px;
+  font-weight: 1000;
+}
+
+.year-chip{
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-weight: 1000;
+  font-size: 12px;
+  background: rgba(249,115,22,.14);
+  border: 1px solid rgba(249,115,22,.22);
+  color:#9a3412;
+}
+
+.year-list{
+  margin-top: 6px;
+  padding-left: 18px;
+  display:grid;
+  gap: 8px;
+  color:#334155;
+  font-weight: 900;
+  line-height: 1.6;
+}
+
+/* Extras */
+.extras{
+  margin-top: 14px;
+  display:grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.extra-card{
+  padding: 18px;
+  border-radius: 22px;
+  background: rgba(255,255,255,.86);
+  border: 1px solid rgba(15,23,42,.08);
+  box-shadow: 0 18px 50px rgba(0,0,0,.10);
+}
+
+.extra-card h2{
+  font-size: 16px;
+}
+
+.extra-card ul{
+  margin-top: 10px;
+  padding-left: 18px;
+  display:grid;
+  gap: 8px;
+  font-weight: 900;
+  color:#334155;
+  line-height: 1.6;
+}
+
+/* Actions */
+.roadmap-actions{
+  margin-top: 22px;
+  display:flex;
+  gap:10px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+/* Responsive */
+@media(max-width: 900px){
+  .extras{ grid-template-columns: 1fr; }
+  .roadmap-head h1{ font-size: 36px; }
+}
+
+/* Smooth tabs animation */
+.year-panel{
+  transition: opacity 160ms ease, transform 160ms ease;
+}
+.year-panel.fade{
+  opacity: 0;
+  transform: translateY(10px);
+}

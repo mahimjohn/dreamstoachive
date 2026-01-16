@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Choose Roadmap | DreamsToAchive</title>
+
+  <link rel="stylesheet" href="style_choose.css" />
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <a class="brand" href="index.html">
+      <span class="brand-dot"></span>
+      DreamsToAchive
+    </a>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html#features">Features</a></li>
+      <li><a href="index.html#roadmaps">Roadmaps</a></li>
+      <li><a href="index.html#how">How it works</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <a class="btn btn-ghost" href="index.html">Home</a>
+
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="index.html#features" onclick="closeMenu()">Features</a>
+    <a href="index.html#roadmaps" onclick="closeMenu()">Roadmaps</a>
+    <a href="index.html#how" onclick="closeMenu()">How it works</a>
+  </div>
+
+  <!-- CHOOSE PAGE -->
+  <section class="choose-page">
+    <div class="choose-wrap">
+
+      <!-- LEFT -->
+      <div class="choose-left reveal">
+        <div class="pill">✨ Choose your target</div>
+        <h1>Generate your roadmap in <span class="gradient">10 seconds</span></h1>
+        <p>
+          Select your dream company and role. We’ll generate a complete plan:
+          year-wise topics, certifications, projects and interview prep.
+        </p>
+
+        <div class="choose-tips">
+          <div class="tip reveal delay-1">✅ Beginner friendly roadmap</div>
+          <div class="tip reveal delay-2">✅ Company specific strategy</div>
+          <div class="tip reveal delay-3">✅ Projects + resume guidance</div>
+        </div>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="choose-right reveal delay-2">
+        <div class="choose-card">
+          <h2>Select Company</h2>
+          <p class="muted">Tap one company to select it.</p>
+
+          <div class="company-grid">
+
+            <!-- Big Tech -->
+            <button class="company-btn" data-company="google" onclick="selectCompany('google')">
+              <span class="c-logo"><img src="Logo/google.webp" alt="Google"></span>
+              <div>
+                <b>Google</b>
+                <small>DSA + System Design</small>
+              </div>
+            </button>
+
+            <button class="company-btn" data-company="microsoft" onclick="selectCompany('microsoft')">
+              <span class="c-logo"><img src="Logo/microsoft.png" alt="Microsoft"></span>
+              <div>
+                <b>Microsoft</b>
+                <small>CS Core + Projects</small>
+              </div>
+            </button>
+
+            <button class="company-btn" data-company="amazon" onclick="selectCompany('amazon')">
+              <span class="c-logo"><img src="Logo/amazon.jpg" alt="Amazon"></span>
+              <div>
+                <b>Amazon</b>
+                <small>DSA + Leadership</small>
+              </div>
+            </button>
+
+            <button class="company-btn" data-company="adobe" onclick="selectCompany('adobe')">
+              <span class="c-logo"><img src="Logo/adobe.png" alt="Adobe"></span>
+              <div>
+                <b>Adobe</b>
+                <small>DSA + Projects</small>
+              </div>
+            </button>
+
+            <button class="company-btn" data-company="flipkart" onclick="selectCompany('flipkart')">
+              <span class="c-logo"><img src="Logo/flipkart.jpg" alt="Flipkart"></span>
+              <div>
+                <b>Flipkart</b>
+                <small>DSA + Product Thinking</small>
+              </div>
+            </button>
+
+            <!-- Service / Indian -->
+            <button class="company-btn" data-company="tcs" onclick="selectCompany('tcs')">
+              <span class="c-logo"><img src="Logo/tcs.jpeg" alt="TCS"></span>
+              <div>
+                <b>TCS</b>
+                <small>Aptitude + Basics</small>
+              </div>
+            </button>
+
+            <button class="company-btn" data-company="infosys" onclick="selectCompany('infosys')">
+              <span class="c-logo"><img src="Logo/infosys.png" alt="Infosys"></span>
+              <div>
+                <b>Infosys</b>
+                <small>Aptitude + Projects</small>
+              </div>
+            </button>
+
+            <button class="company-btn" data-company="wipro" onclick="selectCompany('wipro')">
+              <span class="c-logo"><img src="Logo/wipro.png" alt="Wipro"></span>
+              <div>
+                <b>Wipro</b>
+                <small>Aptitude + Coding</small>
+              </div>
+            </button>
+
+            <button class="company-btn" data-company="accenture" onclick="selectCompany('accenture')">
+              <span class="c-logo"><img src="Logo/accenture.jpg" alt="Accenture"></span>
+              <div>
+                <b>Accenture</b>
+                <small>Basics + Communication</small>
+              </div>
+            </button>
+
+            <button class="company-btn" data-company="cognizant" onclick="selectCompany('cognizant')">
+              <span class="c-logo"><img src="Logo/cognizant.png" alt="Cognizant"></span>
+              <div>
+                <b>Cognizant</b>
+                <small>Aptitude + OOP</small>
+              </div>
+            </button>
+
+            <button class="company-btn" data-company="capgemini" onclick="selectCompany('capgemini')">
+              <span class="c-logo"><img src="Logo/capgemini.png" alt="Capgemini"></span>
+              <div>
+                <b>Capgemini</b>
+                <small>Aptitude + Basics</small>
+              </div>
+            </button>
+
+            <button class="company-btn" data-company="hcl" onclick="selectCompany('hcl')">
+              <span class="c-logo"><img src="Logo/hcl.png" alt="HCL"></span>
+              <div>
+                <b>HCL</b>
+                <small>Aptitude + Interview</small>
+              </div>
+            </button>
+
+            <button class="company-btn" data-company="techm" onclick="selectCompany('techm')">
+              <span class="c-logo"><img src="Logo/tech mahinder.png" alt="Tech Mahindra"></span>
+              <div>
+                <b>Tech Mahindra</b>
+                <small>Aptitude + Basics</small>
+              </div>
+            </button>
+
+            <button class="company-btn" data-company="lt" onclick="selectCompany('lt')">
+              <span class="c-logo"><img src="Logo/l&t.jpg" alt="L&T"></span>
+              <div>
+                <b>L&T (LTI Mindtree)</b>
+                <small>Basics + Internship</small>
+              </div>
+            </button>
+
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label>Selected Company</label>
+              <input id="company" type="text" value="Google" readonly />
+            </div>
+
+            <div class="field">
+              <label>Role</label>
+              <select id="role">
+                <optgroup label="Software Roles">
+                  <option value="sde">SDE (Software Developer)</option>
+                  <option value="fullstack">Full Stack Developer</option>
+                  <option value="frontend">Frontend Developer</option>
+                  <option value="backend">Backend Developer</option>
+                  <option value="android">Android Developer</option>
+                  <option value="devops">DevOps Engineer</option>
+                  <option value="cyber">Cybersecurity Engineer</option>
+                </optgroup>
+
+                <optgroup label="Data / AI Roles">
+                  <option value="data_analyst">Data Analyst</option>
+                  <option value="data_engineer">Data Engineer</option>
+                  <option value="data_scientist">Data Scientist</option>
+                  <option value="aiml">AI / ML Engineer</option>
+                </optgroup>
+
+                <optgroup label="Product / Design / Testing">
+                  <option value="pm">Product Manager</option>
+                  <option value="uiux">UI/UX Designer</option>
+                  <option value="qa">QA / Test Engineer</option>
+                </optgroup>
+              </select>
+            </div>
+          </div>
+
+          <button class="btn btn-primary btn-lg full" onclick="generateRoadmap()">
+            Generate Roadmap 🚀
+          </button>
+
+          <div class="mini-note">
+            Tip: For class demo, open this page on mobile and generate roadmap.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2026 DreamsToAchive.co.in • Built for students 🚀</p>
+  </footer>
+
+  <script src="script_choose.js"></script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roadmap | DreamsToAchive</title>
+
+  <link rel="stylesheet" href="style_index.css" />
+  <link rel="stylesheet" href="style_roadmap.css" />
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <a class="brand" href="index.html">
+      <span class="brand-dot"></span>
+      DreamsToAchive
+    </a>
+
+    <div class="nav-actions">
+      <a class="btn btn-ghost" href="choose.html">Back</a>
+      <a class="btn btn-primary" href="choose.html">Generate New</a>
+    </div>
+  </nav>
+
+  <!-- HEADER -->
+  <header class="roadmap-head">
+    <div class="roadmap-head-inner">
+
+      <div class="head-top">
+        <div class="badge">📌 Personalized Roadmap</div>
+
+        <!-- ✅ Company logo -->
+        <div class="company-hero">
+          <div class="company-logo">
+            <img id="companyLogo" src="Logo/google.webp" alt="Company Logo">
+          </div>
+          <div class="company-text">
+            <div class="small-muted">Target Company</div>
+            <div class="company-name" id="companyName">Google</div>
+          </div>
+        </div>
+      </div>
+
+      <h1 id="title">
+        Roadmap for <span class="gradient">Company</span> — Role
+      </h1>
+
+      <p id="subtitle">
+        Follow this plan from Year 1 to Year 4. Build skills, projects, certifications and interview prep.
+      </p>
+
+      <div class="meta-row">
+        <div class="meta-pill" id="metaCompany">Company: -</div>
+        <div class="meta-pill" id="metaRole">Role: -</div>
+        <div class="meta-pill">Duration: 4 Years</div>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ROADMAP CONTENT -->
+  <main class="roadmap-page" id="roadmapArea">
+
+    <!-- ✅ Tabs -->
+    <section class="year-tabs reveal">
+      <button class="tab active" data-year="0">Year 1</button>
+      <button class="tab" data-year="1">Year 2</button>
+      <button class="tab" data-year="2">Year 3</button>
+      <button class="tab" data-year="3">Year 4</button>
+    </section>
+
+    <!-- ✅ Year Content -->
+    <section class="year-panel reveal">
+      <div class="year-panel-head">
+        <div class="year-title" id="yearTitle">Year 1</div>
+        <div class="year-chip" id="yearChip">Foundation</div>
+      </div>
+      <ul class="year-list" id="yearList"></ul>
+    </section>
+
+    <!-- Extras -->
+    <section class="extras">
+      <div class="extra-card reveal">
+        <h2>🎯 Certifications</h2>
+        <ul id="certList"></ul>
+      </div>
+
+      <div class="extra-card reveal delay-1">
+        <h2>💻 Projects</h2>
+        <ul id="projList"></ul>
+      </div>
+
+      <div class="extra-card reveal delay-2">
+        <h2>🧠 Interview Prep</h2>
+        <ul id="prepList"></ul>
+      </div>
+    </section>
+
+    <!-- Actions -->
+    <section class="roadmap-actions reveal">
+      <button class="btn btn-primary btn-lg" id="downloadBtn">Download PDF</button>
+      <button class="btn btn-ghost btn-lg" onclick="window.print()">Print</button>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 DreamsToAchive.co.in • Built for students 🚀</p>
+  </footer>
+
+  <!-- ✅ Libraries for PDF download -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+  <script src="script_roadmap.js"></script>
+</body>
+</html>

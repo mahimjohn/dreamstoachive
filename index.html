@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DreamsToAchive | Roadmap to Dream Companies</title>
+
+  <link rel="stylesheet" href="style_index.css" />
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <a class="brand" href="#">
+      <span class="brand-dot"></span>
+      DreamsToAchive
+    </a>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#features">Features</a></li>
+      <li><a href="#roadmaps">Roadmaps</a></li>
+      <li><a href="#roles">Roles</a></li>  <!-- ✅ ADDED -->
+      <li><a href="#how">How it works</a></li>
+      <li><a href="#cta">Start</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <a class="btn btn-ghost" href="#roadmaps">Explore</a>
+      <a class="btn btn-primary" href="choose.html">Generate</a>
+
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#features" onclick="closeMenu()">Features</a>
+    <a href="#roadmaps" onclick="closeMenu()">Roadmaps</a>
+    <a href="#roles" onclick="closeMenu()">Roles</a> <!-- ✅ ADDED -->
+    <a href="#how" onclick="closeMenu()">How it works</a>
+    <a href="choose.html">Generate Roadmap</a>
+  </div>
+
+  <!-- HERO -->
+  <header class="hero" id="top">
+    <div class="hero-inner">
+
+      <div class="hero-left">
+        <div class="pill reveal delay-1">
+          🚀 Roadmaps • Certifications • Projects • Interview Prep
+        </div>
+
+        <h1 class="reveal delay-2">
+          Build your <span class="gradient">Dream Career</span> with a
+          year-wise roadmap.
+        </h1>
+
+        <p class="reveal delay-3">
+          DreamsToAchive guides college students with a structured plan from 1st year to 4th year —
+          so you know exactly what to learn, build, and prepare for top companies.
+        </p>
+
+        <div class="hero-cta reveal delay-4">
+          <a class="btn btn-primary btn-lg" href="choose.html">Generate Roadmap</a>
+          <button class="btn btn-ghost btn-lg" onclick="scrollToSection('features')">See Features</button>
+        </div>
+
+        <div class="hero-stats reveal delay-4">
+          <div class="stat">
+            <h3>4</h3>
+            <p>Year Plan</p>
+          </div>
+          <div class="stat">
+            <h3>10+</h3>
+            <p>Projects</p>
+          </div>
+          <div class="stat">
+            <h3>14+</h3> <!-- ✅ UPDATED -->
+            <p>Roles</p> <!-- ✅ UPDATED -->
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right reveal delay-3">
+        <div class="hero-card">
+          <div class="hero-card-top">
+            <div class="chip">Target</div>
+            <div class="chip chip-dark">SDE</div>
+          </div>
+
+          <h3>Example Roadmap</h3>
+
+          <div class="mini">
+            <div class="mini-row">
+              <span class="mini-dot"></span>
+              <div>
+                <b>Year 1</b>
+                <small>Programming + Git + Basics</small>
+              </div>
+            </div>
+
+            <div class="mini-row">
+              <span class="mini-dot"></span>
+              <div>
+                <b>Year 2</b>
+                <small>OOP + DBMS + OS</small>
+              </div>
+            </div>
+
+            <div class="mini-row">
+              <span class="mini-dot"></span>
+              <div>
+                <b>Year 3</b>
+                <small>DSA + Internships</small>
+              </div>
+            </div>
+
+            <div class="mini-row">
+              <span class="mini-dot"></span>
+              <div>
+                <b>Year 4</b>
+                <small>Interview + Resume + Apply</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-card-bottom">
+            <span class="tag">Certifications</span>
+            <span class="tag">Projects</span>
+            <span class="tag">Mock Interviews</span>
+          </div>
+        </div>
+
+        <img class="hero-image" alt="student learning"
+          src="https://images.unsplash.com/photo-1531497865144-0464ef8fb9a9?q=80&w=1200&auto=format&fit=crop" />
+      </div>
+
+    </div>
+  </header>
+
+  <!-- COMPANY STRIP -->
+  <section class="strip reveal">
+    <div class="strip-inner">
+      <span>Inspired by top career paths for</span>
+      <div class="strip-logos">
+        <div class="logo-pill">Google</div>
+        <div class="logo-pill">Microsoft</div>
+        <div class="logo-pill">Amazon</div>
+        <div class="logo-pill">Adobe</div>
+        <div class="logo-pill">Infosys</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="section" id="features">
+    <div class="section-head reveal">
+      <h2>Everything you need — in one place</h2>
+      <p>Not just theory. A practical roadmap with clear milestones and outcomes.</p>
+    </div>
+
+    <div class="grid-3">
+      <article class="card reveal delay-1">
+        <div class="icon">📘</div>
+        <h3>Year-wise learning</h3>
+        <p>Know what to study each year without confusion or random resources.</p>
+      </article>
+
+      <article class="card reveal delay-2">
+        <div class="icon">🧾</div>
+        <h3>Certifications</h3>
+        <p>Choose the most useful certifications based on your role and company goal.</p>
+      </article>
+
+      <article class="card reveal delay-3">
+        <div class="icon">💻</div>
+        <h3>Project guidance</h3>
+        <p>Build projects that actually improve your resume and skills.</p>
+      </article>
+
+      <article class="card reveal delay-1">
+        <div class="icon">🧠</div>
+        <h3>Interview prep</h3>
+        <p>DSA, CS fundamentals, and mock interview steps — all included.</p>
+      </article>
+
+      <article class="card reveal delay-2">
+        <div class="icon">📈</div>
+        <h3>Progress tracking</h3>
+        <p>Follow milestones and stay consistent with weekly targets.</p>
+      </article>
+
+      <article class="card reveal delay-3">
+        <div class="icon">🎯</div>
+        <h3>Company focus</h3>
+        <p>Different strategies for product vs service based companies.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ✅ ROLES SECTION ADDED HERE -->
+  <section class="section" id="roles">
+    <div class="section-head reveal">
+      <h2>Career Roles Available</h2>
+      <p>Pick your target role — we’ll generate roadmap + skills + projects for it.</p>
+    </div>
+
+    <div class="roles-wrap reveal delay-1">
+      <div class="role-chip">💻 SDE</div>
+      <div class="role-chip">🧩 Full Stack Developer</div>
+      <div class="role-chip">🎨 Frontend Developer</div>
+      <div class="role-chip">🗄️ Backend Developer</div>
+      <div class="role-chip">📱 Android Developer</div>
+      <div class="role-chip">⚙️ DevOps Engineer</div>
+      <div class="role-chip">🛡️ Cybersecurity Engineer</div>
+
+      <div class="role-chip">📊 Data Analyst</div>
+      <div class="role-chip">🧱 Data Engineer</div>
+      <div class="role-chip">🔬 Data Scientist</div>
+      <div class="role-chip">🤖 AI / ML Engineer</div>
+
+      <div class="role-chip">📌 Product Manager</div>
+      <div class="role-chip">🖌️ UI/UX Designer</div>
+      <div class="role-chip">✅ QA / Test Engineer</div>
+    </div>
+
+    <div class="roles-cta reveal delay-2">
+      <a class="btn btn-primary btn-lg" href="choose.html">Choose Company + Role</a>
+    </div>
+  </section>
+
+  <!-- ROADMAP PREVIEW -->
+  <section class="section alt" id="roadmaps">
+    <div class="two-col">
+      <div class="left reveal">
+        <h2>Choose a company. Choose a role. Get a roadmap.</h2>
+        <p>
+          Your classmates will instantly understand your idea —
+          just by selecting a company and generating the roadmap.
+        </p>
+
+        <div class="bullet">
+          <div class="tick">✅</div>
+          <div>
+            <b>Simple for beginners</b>
+            <p>Clear steps and topics, no confusion.</p>
+          </div>
+        </div>
+
+        <div class="bullet">
+          <div class="tick">✅</div>
+          <div>
+            <b>Realistic goals</b>
+            <p>Projects + internships + interview strategy.</p>
+          </div>
+        </div>
+
+        <div class="bullet">
+          <div class="tick">✅</div>
+          <div>
+            <b>Updated continuously</b>
+            <p>You can add more companies and roles anytime.</p>
+          </div>
+        </div>
+
+        <a class="btn btn-primary btn-lg" href="choose.html">Generate Roadmap</a>
+      </div>
+
+      <div class="right reveal delay-2">
+        <div class="preview">
+          <div class="preview-head">
+            <span class="preview-title">Popular Roadmaps</span>
+            <span class="preview-badge">LIVE</span>
+          </div>
+
+          <div class="preview-list">
+            <div class="preview-item">
+              <div class="p-left">
+                <b>Google</b><span>• SDE</span>
+              </div>
+              <span class="p-chip">DSA + Design</span>
+            </div>
+
+            <div class="preview-item">
+              <div class="p-left">
+                <b>Microsoft</b><span>• SDE</span>
+              </div>
+              <span class="p-chip">CS Core</span>
+            </div>
+
+            <div class="preview-item">
+              <div class="p-left">
+                <b>Amazon</b><span>• SDE</span>
+              </div>
+              <span class="p-chip">LP + DSA</span>
+            </div>
+
+            <div class="preview-item">
+              <div class="p-left">
+                <b>AI / ML</b><span>• Role</span>
+              </div>
+              <span class="p-chip">Projects</span>
+            </div>
+          </div>
+
+          <div class="preview-foot">
+            <small>Tip: Add more companies later (Apple, Netflix, TCS, etc.)</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="section" id="how">
+    <div class="section-head reveal">
+      <h2>How it works</h2>
+      <p>Simple flow — perfect for classroom demo.</p>
+    </div>
+
+    <div class="timeline">
+      <div class="t-card reveal delay-1">
+        <div class="t-num">01</div>
+        <h3>Select company</h3>
+        <p>Pick Google, Microsoft, Amazon etc.</p>
+      </div>
+
+      <div class="t-card reveal delay-2">
+        <div class="t-num">02</div>
+        <h3>Select role</h3>
+        <p>SDE / AI-ML / Data Analyst.</p>
+      </div>
+
+      <div class="t-card reveal delay-3">
+        <div class="t-num">03</div>
+        <h3>Generate roadmap</h3>
+        <p>Year 1 → Year 4 plan is created.</p>
+      </div>
+
+      <div class="t-card reveal delay-4">
+        <div class="t-num">04</div>
+        <h3>Follow + crack</h3>
+        <p>Projects, certifications, interviews.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta reveal" id="cta">
+    <div class="cta-inner">
+      <h2>Start your dream journey today ✨</h2>
+      <p>Generate your roadmap now. Your future self will thank you.</p>
+      <div class="cta-actions">
+        <a class="btn btn-white btn-lg" href="choose.html">Generate Roadmap</a>
+        <button class="btn btn-ghost btn-lg" onclick="scrollToSection('top')">Back to top</button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2026 DreamsToAchive.co.in • Built for students 🚀</p>
+  </footer>
+
+  <script src="script_index.js"></script>
+</body>
+</html>
