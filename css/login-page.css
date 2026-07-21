@@ -1,0 +1,303 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Poppins,sans-serif;
+}
+
+
+/* BODY */
+
+body{
+
+    height:100vh;
+
+    background-image:
+
+    linear-gradient(
+        rgba(10,35,66,0.65),
+        rgba(13,71,161,0.75)
+    ),
+
+    url("../assets/bg.png");
+
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+}
+
+
+/* CENTERING THE CARD */
+
+.overlay{
+
+    width:100%;
+    height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+
+/* LOGIN CARD */
+
+.login-card{
+
+    width:500px;
+
+    padding:40px;
+
+    background:rgba(255,255,255,0.18);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:25px;
+
+    box-shadow:
+        0px 15px 40px rgba(0,0,0,0.25);
+
+    color:white;
+
+}
+
+
+/* HEADER SECTION */
+
+.header{
+
+    display:flex;
+    align-items:center;
+    gap:18px;
+
+    margin-bottom:20px;
+
+}
+
+
+/* LOGO */
+
+.logo{
+
+    width:75px;
+
+}
+
+
+/* SCHOOL DETAILS */
+
+.school-details{
+
+    text-align:left;
+
+}
+
+
+.school-details h1{
+
+    font-size:24px;
+    line-height:1.2;
+
+}
+
+
+.school-details p{
+
+    margin-top:5px;
+
+    font-size:14px;
+
+    opacity:0.85;
+
+}
+
+
+/* HORIZONTAL LINE */
+
+hr{
+
+    border:none;
+    border-top:1px solid rgba(255,255,255,0.30);
+
+    margin-bottom:30px;
+
+}
+
+
+/* LOGIN HEADING */
+
+.login-heading{
+
+    text-align:center;
+
+    font-size:30px;
+
+    letter-spacing:4px;
+
+    margin-bottom:30px;
+
+}
+
+
+/* INPUT BOXES */
+
+.input-box{
+
+    display:flex;
+    flex-direction:column;
+
+    margin-bottom:20px;
+
+}
+
+
+.input-box label{
+
+    font-size:15px;
+
+    margin-bottom:8px;
+
+}
+
+
+.input-box input{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:12px;
+
+    font-size:15px;
+
+    color:#1E293B;
+
+}
+
+
+/* FORGOT PASSWORD */
+
+.forgot-password{
+
+    text-align:right;
+
+    margin-bottom:25px;
+
+}
+
+
+.forgot-password a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:14px;
+
+    transition:0.3s;
+
+}
+
+
+.forgot-password a:hover{
+
+    opacity:0.8;
+
+}
+
+
+/* LOGIN BUTTON */
+
+.login-btn{
+
+    width:100%;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    color:white;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #2563EB,
+        #1E40AF
+    );
+
+    transition:0.3s;
+
+}
+
+
+/* BUTTON HOVER */
+
+.login-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+        0px 10px 25px rgba(37,99,235,0.35);
+
+}
+
+
+/* RESPONSIVE DESIGN */
+
+@media(max-width:768px){
+
+    .login-card{
+
+        width:90%;
+
+        padding:30px;
+
+    }
+
+
+    .header{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+
+    .school-details{
+
+        text-align:center;
+
+    }
+
+
+    .school-details h1{
+
+        font-size:22px;
+
+    }
+
+
+    .login-heading{
+
+        font-size:26px;
+
+    }
+
+}
