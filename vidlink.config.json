@@ -1,0 +1,28 @@
+{
+  "provider": "VidLink",
+  "meta": {
+    "anilist_id": 178083,
+    "mal_id": 61763,
+    "title": "Tokyo Revengers: Santen Sensou-hen",
+    "episode": 1,
+    "mode": "sub"
+  },
+  "player_settings": {
+    "autoplay": false,
+    "allow_fullscreen": true,
+    "sandbox_guards": [
+      "allow-scripts",
+      "allow-same-origin",
+      "allow-forms"
+    ]
+  },
+  "request_headers": {
+    "Origin": "https://vidlink.pro",
+    "Referer": "https://vidlink.pro",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
+  },
+  "endpoints": {
+    "iframe_embed_url": "https://vidlink.pro",
+    "api_stream_resolver": "https://vidlink.pro"
+  }
+}

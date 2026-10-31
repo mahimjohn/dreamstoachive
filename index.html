@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#08090d">
+  <title>Crimson Anime | Discover Your Next World</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="app">
+
+    <!-- Sidebar -->
+    
+<header class="topbar">
+  <a class="brand" href="#home" aria-label="Crimson Anime home">
+    <span class="brand-icon">▶</span>
+    <span class="brand-name">
+      CRIMSON
+      <span>ANIME</span>
+    </span>
+  </a>
+
+  <nav class="main-nav" aria-label="Main navigation">
+    <a class="top-link active" href="#home">Home</a>
+    <a class="top-link" href="#discover">Discover</a>
+    <a class="top-link" href="#trending">Trending</a>
+    <a class="top-link" href="#genres">Genres</a>
+    <a class="top-link" href="#watchlist">Watchlist</a>
+  </nav>
+
+  
+
+<form class="search-box" id="homeSearchForm" role="search">
+  <input
+    id="searchInput"
+    type="search"
+    placeholder="Search anime..."
+    autocomplete="off"
+    aria-label="Search anime"
+  />
+  <button
+    class="search-icon"
+    type="submit"
+    aria-label="Search anime"
+  >
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <circle cx="11" cy="11" r="6.5"></circle>
+      <path d="m16 16 4 4"></path>
+    </svg>
+  </button>
+</form>
+
+  <button class="profile-button" type="button" aria-label="Profile">
+    A
+  </button>
+</header>
+
+
+    <!-- Main content -->
+    <main class="main-content" id="home">
+
+      <div class="page-content">
+
+        <!-- Hero -->
+        <section class="hero" id="hero">
+          <div class="hero-background" id="heroBackground"></div>
+          <div class="hero-shade"></div>
+
+          <div class="hero-content">
+            <div class="hero-tags">
+              <span class="featured-tag">✦ EDITOR'S PICK</span>
+              <span class="hero-meta">ANIME SERIES</span>
+            </div>
+
+            <h1 id="heroTitle">Beyond the<br>Crimson Sky</h1>
+
+            <div class="hero-details">
+              <span class="rating">★ <span id="heroRating">9.2</span></span>
+              <span id="heroYear">2026</span>
+              <span id="heroEpisodes">24 Episodes</span>
+            </div>
+
+            <p id="heroDescription">
+              A mysterious power awakens, changing the destiny of a world
+              where forgotten legends are beginning to return.
+            </p>
+
+            <div class="hero-buttons">
+              <button class="btn btn-primary" id="exploreButton">
+                <span>▶</span> Explore Anime
+              </button>
+              <button class="btn btn-secondary" id="heroWatchlist">
+                ♡ <span>Add to Watchlist</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="hero-pagination" id="heroPagination"
+               aria-label="Featured anime slides"></div>
+        </section>
+
+        <!-- Anime rows are created by JavaScript -->
+        <section class="anime-section" id="trending">
+          <div class="section-heading">
+            <div>
+              <span class="section-kicker">WHAT'S POPULAR</span>
+              <h2>Trending Anime</h2>
+            </div>
+            <div class="carousel-controls">
+              <button class="arrow-btn" data-target="trendingRow"
+                      data-direction="-1" aria-label="Scroll left">‹</button>
+              <button class="arrow-btn" data-target="trendingRow"
+                      data-direction="1" aria-label="Scroll right">›</button>
+            </div>
+          </div>
+          <div class="anime-row" id="trendingRow"></div>
+        </section>
+
+        <section class="anime-section" id="discover">
+          <div class="section-heading">
+            <div>
+              <span class="section-kicker">FRESH STORIES</span>
+              <h2>Recently Added</h2>
+            </div>
+            <div class="carousel-controls">
+              <button class="arrow-btn" data-target="recentRow"
+                      data-direction="-1" aria-label="Scroll left">‹</button>
+              <button class="arrow-btn" data-target="recentRow"
+                      data-direction="1" aria-label="Scroll right">›</button>
+            </div>
+          </div>
+          <div class="anime-row" id="recentRow"></div>
+        </section>
+
+        <section class="anime-section" id="continue">
+          <div class="section-heading">
+            <div>
+              <span class="section-kicker">PICK UP WHERE YOU LEFT OFF</span>
+              <h2>Continue Watching</h2>
+            </div>
+          </div>
+          <div class="anime-row" id="continueRow"></div>
+        </section>
+
+        <section class="anime-section" id="genres">
+          <div class="section-heading">
+            <div>
+              <span class="section-kicker">FIND YOUR NEXT OBSESSION</span>
+              <h2>Explore Genres</h2>
+            </div>
+          </div>
+          <div class="genre-list">
+            <button class="genre-chip" data-genre="Action">⚔ Action</button>
+            <button class="genre-chip" data-genre="Fantasy">✧ Fantasy</button>
+            <button class="genre-chip" data-genre="Adventure">➤ Adventure</button>
+            <button class="genre-chip" data-genre="Romance">♡ Romance</button>
+            <button class="genre-chip" data-genre="Mystery">⌕ Mystery</button>
+            <button class="genre-chip" data-genre="Comedy">☻ Comedy</button>
+          </div>
+        </section>
+
+        <div class="empty-state" id="emptyState" hidden>
+          <span>⌕</span>
+          <h2>No anime found</h2>
+          <p>Try another title or clear your search.</p>
+          <button class="btn btn-secondary" id="clearSearch">Clear Search</button>
+        </div>
+
+        <footer class="footer">
+          <a href="#home" class="footer-brand">CRIMSON ANIME</a>
+          <p>A world beyond imagination.</p>
+          <span>Demo project · Anime artwork and metadata are illustrative.</span>
+        </footer>
+
+      </div>
+    </main>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#08090d">
+  <meta name="description" content="Search and discover anime on Crimson Anime.">
+  <title>Search Anime | Crimson Anime</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/search.css">
+  <script src="js/search.js" defer></script>
+</head>
+<body class="search-page">
+
+  <div class="app">
+    <header class="topbar">
+      <a class="brand" href="index.html#home" aria-label="Crimson Anime home">
+        <span class="brand-icon">▶</span>
+        <span class="brand-name">
+          CRIMSON
+          <span>ANIME</span>
+        </span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a class="top-link" href="index.html#home">Home</a>
+        <a class="top-link" href="index.html#discover">Discover</a>
+        <a class="top-link" href="index.html#trending">Trending</a>
+        <a class="top-link" href="index.html#genres">Genres</a>
+        <a class="top-link" href="index.html#watchlist">Watchlist</a>
+      </nav>
+
+      <form class="search-box search-page-form" id="searchForm" role="search">
+        <button class="search-icon" type="submit" aria-label="Search">⌕</button>
+        <input
+          id="searchInput"
+          name="q"
+          type="search"
+          placeholder="Search anime..."
+          autocomplete="off"
+          aria-label="Search anime titles"
+        >
+        <button
+          class="search-clear"
+          id="clearSearch"
+          type="button"
+          aria-label="Clear search"
+          hidden
+        >×</button>
+      </form>
+
+      <a class="profile-button search-profile" href="index.html#home" aria-label="Return home">A</a>
+    </header>
+
+    <main class="search-main">
+      <section class="search-intro">
+        <span class="section-kicker">YOUR NEXT ADVENTURE STARTS HERE</span>
+        <h1>Find Your <span>Next Anime.</span></h1>
+        <p>Search thousands of anime, discover new favourites, and explore by genre.</p>
+      </section>
+
+      <section class="search-toolbar" aria-label="Search controls">
+        <div class="search-query-heading">
+          <h2 id="resultsHeading">Explore Anime</h2>
+          <p id="resultsCount">Discover popular and trending titles.</p>
+        </div>
+
+        <label class="sort-control">
+          <span>Sort by</span>
+          <select id="sortSelect">
+            <option value="POPULARITY_DESC">Popularity</option>
+            <option value="SCORE_DESC">Highest rated</option>
+            <option value="TRENDING_DESC">Trending</option>
+            <option value="START_DATE_DESC">Newest first</option>
+            <option value="START_DATE">Oldest first</option>
+            <option value="TITLE_ROMAJI">Title A–Z</option>
+          </select>
+        </label>
+      </section>
+
+      <div class="search-layout">
+        <aside class="search-filters">
+          <div class="filter-heading">
+            <h2>Filters</h2>
+            <button type="button" id="resetFilters">Reset</button>
+          </div>
+
+          <label class="filter-field">
+            <span>Genre</span>
+            <select id="genreFilter">
+              <option value="">All genres</option>
+              <option>Action</option>
+              <option>Adventure</option>
+              <option>Comedy</option>
+              <option>Drama</option>
+              <option>Fantasy</option>
+              <option>Horror</option>
+              <option>Mahou Shoujo</option>
+              <option>Mecha</option>
+              <option>Music</option>
+              <option>Mystery</option>
+              <option>Psychological</option>
+              <option>Romance</option>
+              <option>Sci-Fi</option>
+              <option>Slice of Life</option>
+              <option>Sports</option>
+              <option>Supernatural</option>
+              <option>Thriller</option>
+            </select>
+          </label>
+
+          <label class="filter-field">
+            <span>Format</span>
+            <select id="formatFilter">
+              <option value="">All formats</option>
+              <option value="TV">TV Series</option>
+              <option value="TV_SHORT">TV Short</option>
+              <option value="MOVIE">Movie</option>
+              <option value="OVA">OVA</option>
+              <option value="ONA">ONA</option>
+              <option value="SPECIAL">Special</option>
+              <option value="MUSIC">Music</option>
+            </select>
+          </label>
+
+          <label class="filter-field">
+            <span>Release year</span>
+            <select id="yearFilter">
+              <option value="">Any year</option>
+            </select>
+          </label>
+
+          <label class="filter-field">
+            <span>Status</span>
+            <select id="statusFilter">
+              <option value="">All statuses</option>
+              <option value="RELEASING">Currently airing</option>
+              <option value="FINISHED">Finished</option>
+              <option value="NOT_YET_RELEASED">Upcoming</option>
+              <option value="CANCELLED">Cancelled</option>
+              <option value="HIATUS">On hiatus</option>
+            </select>
+          </label>
+
+          <button class="apply-filters" type="button" id="applyFilters">
+            Apply Filters
+          </button>
+        </aside>
+
+        <section class="search-results" aria-label="Anime search results">
+          <div class="active-filters" id="activeFilters"></div>
+
+          <div class="search-result-grid" id="resultsGrid" aria-live="polite">
+            <div class="search-loading">
+              <span class="loading-spinner"></span>
+              <p>Loading anime...</p>
+            </div>
+          </div>
+
+          <div class="search-no-results" id="noResults" hidden>
+            <span class="no-results-icon">⌕</span>
+            <h2>No anime found</h2>
+            <p>Try a different title or adjust your filters.</p>
+            <button type="button" class="apply-filters" id="clearAllFilters">
+              Clear filters
+            </button>
+          </div>
+
+          <p class="search-error" id="searchError" role="alert" hidden></p>
+
+          <button class="load-more-button" id="loadMore" type="button" hidden>
+            Load More Anime
+          </button>
+        </section>
+      </div>
+
+      <footer class="search-footer">
+        <a href="index.html#home">← Back to Crimson Anime</a>
+        <p>Anime information provided by AniList.</p>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>

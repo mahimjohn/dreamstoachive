@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#08090d">
+  <title>Watch Anime | Crimson Anime</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/anime-watch.css">
+  <script src="js/anime-watch.js" defer></script>
+</head>
+<body class="watch-page">
+  <header class="watch-navbar">
+    <a class="brand" href="index.html">
+      <span class="brand-icon">▶</span>
+      <span class="brand-name">CRIMSON <span>ANIME</span></span>
+    </a>
+    <a id="backToAnime" href="index.html">← Anime details</a>
+  </header>
+
+  <main class="watch-main">
+    <div class="watch-player-shell">
+      <iframe
+        id="watchPlayer"
+        title="Crimson Anime video player"
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowfullscreen
+        referrerpolicy="strict-origin-when-cross-origin">
+      </iframe>
+    </div>
+
+    <p class="watch-status" id="watchStatus" role="status">
+      Loading episode...
+    </p>
+
+    <section class="watch-content">
+      <div class="watch-information">
+        <a class="watch-anime-title" id="watchAnimeTitle" href="#">
+          Loading anime...
+        </a>
+        <h1 id="watchEpisodeTitle">Loading episode...</h1>
+        <p id="watchEpisodeMeta"></p>
+        <p id="watchDescription"></p>
+
+        <div class="watch-actions">
+          <label for="watchLanguage">Audio</label>
+          <select id="watchLanguage">
+            <option value="sub">Sub</option>
+            <option value="dub">Dub</option>
+            <option value="hindi">Hindi</option>
+          </select>
+          <button id="watchPrevious" type="button">← Previous episode</button>
+          <button id="watchNext" type="button">Next episode →</button>
+        </div>
+      </div>
+
+      <aside class="watch-sidebar">
+        <h2>Continue watching</h2>
+        <p id="watchSidebarMessage">
+          Use Next episode to continue.
+        </p>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="watch-footer">
+    <a href="index.html">CRIMSON ANIME</a>
+    <p>A world beyond imagination.</p>
+  </footer>
+</body>
+</html>

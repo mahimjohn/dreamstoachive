@@ -1,0 +1,216 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#08090d">
+  <title>Anime Details | Crimson Anime</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/anime-details.css">
+  <script src="js/anime-details.js" defer></script>
+</head>
+<body class="details-page">
+
+  <header class="topbar details-navbar">
+    <a class="brand" href="index.html" aria-label="Crimson Anime home">
+      <span class="brand-icon">▶</span>
+      <span class="brand-name">CRIMSON <span>ANIME</span></span>
+    </a>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <a class="top-link" href="index.html#home">Home</a>
+      <a class="top-link" href="index.html#discover">Discover</a>
+      <a class="top-link" href="index.html#trending">Trending</a>
+      <a class="top-link" href="index.html#genres">Genres</a>
+      <a class="top-link" href="index.html#watchlist">Watchlist</a>
+    </nav>
+
+    <a class="details-back-link" href="index.html">← Catalogue</a>
+  </header>
+
+  <main id="detailsMain">
+    <section class="details-hero" id="detailsHero">
+      <div class="details-hero-background" id="detailBanner"></div>
+      <div class="details-hero-shade"></div>
+
+      <div class="details-hero-content">
+        <p class="details-eyebrow">
+          <span>✦ CRIMSON ANIME</span>
+          <span id="detailFormat">ANIME SERIES</span>
+        </p>
+
+        <h1 id="detailTitle">Loading anime...</h1>
+
+        <div class="details-meta" id="detailMeta">
+          <span>Loading details</span>
+        </div>
+
+        <div class="details-genres" id="detailGenres"></div>
+
+        <p class="details-synopsis" id="detailSynopsis">
+          Fetching anime information from AniList...
+        </p>
+
+        <button class="details-text-button" id="toggleSynopsis" hidden>
+          Read more ↓
+        </button>
+
+        <div class="details-actions">
+          <button class="details-button details-button-primary"
+                  id="episodeJump" type="button">
+            <span>▶</span> Explore Episodes
+          </button>
+
+          <button class="details-button details-button-secondary"
+                  id="detailWatchlist" type="button">
+            ♡ <span>Add to Watchlist</span>
+          </button>
+
+          <a class="details-button details-button-secondary"
+             id="anilistLink" href="#" target="_blank"
+             rel="noopener noreferrer">
+            AniList ↗
+          </a>
+        </div>
+      </div>
+
+      <div class="details-poster-wrap">
+        <img id="detailPoster" class="details-poster"
+             src="" alt="" hidden>
+      </div>
+    </section>
+
+    <section class="details-information" aria-labelledby="aboutHeading">
+      <div class="details-about">
+        <p class="details-section-kicker">THE STORY</p>
+        <h2 id="aboutHeading">About this anime</h2>
+        <p id="detailFullSynopsis">Loading synopsis...</p>
+      </div>
+
+      <aside class="details-facts">
+        <h2>Anime information</h2>
+        <dl id="detailFacts">
+          <div><dt>Status</dt><dd>Loading...</dd></div>
+        </dl>
+        <a id="detailSourceLink" href="#" target="_blank"
+           rel="noopener noreferrer">View source information ↗</a>
+      </aside>
+    </section>
+
+
+<section class="vidnest-section" id="vidnestSection">
+  <div class="vidnest-heading">
+    <div>
+      <p class="details-section-kicker">NOW STREAMING</p>
+      <h2>Watch Episodes</h2>
+      <p id="vidnestStatus" role="status">
+        Select an episode to start watching.
+      </p>
+    </div>
+
+    <div class="vidnest-language">
+      <label for="vidnestLanguage">Audio</label>
+      <select id="vidnestLanguage">
+        <option value="sub">Sub</option>
+        <option value="dub">Dub</option>
+        <option value="hindi">Hindi</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="vidnest-player-wrap">
+    <iframe
+      id="vidnestPlayer"
+      title="Crimson Anime episode player"
+      src="about:blank"
+      loading="lazy"
+      allow="autoplay; fullscreen; picture-in-picture"
+      allowfullscreen
+      referrerpolicy="strict-origin-when-cross-origin">
+    </iframe>
+
+    <div class="vidnest-placeholder" id="vidnestPlaceholder">
+      <span>▶</span>
+      <p>Choose an episode below to begin.</p>
+    </div>
+  </div>
+
+  <div class="vidnest-player-footer">
+    <span id="vidnestNowPlaying">No episode selected</span>
+
+    <div class="vidnest-navigation">
+      <button id="vidnestPrevious" type="button" disabled>
+        ← Previous
+      </button>
+      <button id="vidnestNext" type="button" disabled>
+        Next →
+      </button>
+    </div>
+  </div>
+</section>
+
+
+    <section class="episodes-section" id="episodesSection">
+      <div class="episodes-heading">
+        <div>
+          <p class="details-section-kicker">YOUR NEXT EPISODE</p>
+          <h2>Episodes</h2>
+          <p class="episodes-subtitle" id="episodeSummary">
+            Looking for episode information...
+          </p>
+        </div>
+
+        <div class="episode-controls">
+          <label class="season-select-label" for="seasonSelect">
+            Season / Part
+          </label>
+          <select id="seasonSelect" disabled>
+            <option value="all">All episodes</option>
+          </select>
+
+          <label class="season-select-label" for="episodeSort">
+            Sort
+          </label>
+          <select id="episodeSort">
+            <option value="asc">Oldest first</option>
+            <option value="desc">Newest first</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="episode-notice" id="episodeNotice" role="status">
+        Loading episode data...
+      </div>
+
+      <div class="episode-grid" id="episodeGrid"></div>
+
+      <div class="episode-load-more-wrap">
+        <button class="details-button details-button-secondary"
+                id="loadMoreEpisodes" type="button" hidden>
+          Load more episodes
+        </button>
+      </div>
+
+      <p class="episode-disclaimer">
+        Episode information and artwork may be provided by external catalogue
+        services. Crimson Anime does not host episode videos.
+      </p>
+    </section>
+
+    <section class="related-section" id="relatedSection" hidden>
+      <p class="details-section-kicker">KEEP EXPLORING</p>
+      <h2>Related anime</h2>
+      <div class="related-list" id="relatedList"></div>
+    </section>
+  </main>
+
+  <div class="details-toast" id="detailsToast"
+       role="status" aria-live="polite"></div>
+
+  <footer class="details-footer">
+    <a class="footer-brand" href="index.html">CRIMSON ANIME</a>
+    <p>A world beyond imagination.</p>
+  </footer>
+</body>
+</html>

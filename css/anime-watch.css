@@ -1,0 +1,164 @@
+
+.watch-page {
+  min-height: 100vh;
+  background: #08090d;
+  color: #f5f5f7;
+}
+
+.watch-navbar {
+  min-height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 12px 4%;
+  background: #111116;
+  border-bottom: 1px solid #25252c;
+}
+
+.watch-navbar a,
+.watch-anime-title,
+.watch-footer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.watch-navbar > a:last-child {
+  color: #d0d0d8;
+  font-size: 0.9rem;
+}
+
+.watch-main {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.watch-player-shell {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  max-height: 85vh;
+  background: #000;
+  overflow: hidden;
+}
+
+.watch-player-shell iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.watch-status {
+  margin: 0;
+  padding: 12px 4%;
+  color: #aaaab6;
+  font-size: 0.9rem;
+  background: #101015;
+}
+
+.watch-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 340px;
+  gap: 38px;
+  padding: 30px 5% 60px;
+}
+
+.watch-anime-title {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: #f05a9c;
+  font-weight: 700;
+}
+
+.watch-information h1 {
+  margin: 0 0 12px;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+}
+
+.watch-information > p,
+.watch-sidebar p {
+  color: #b7b7c2;
+  line-height: 1.7;
+}
+
+.watch-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.watch-actions label {
+  color: #b7b7c2;
+}
+
+.watch-actions select,
+.watch-actions button {
+  min-height: 42px;
+  padding: 0 13px;
+  color: #f5f5f7;
+  background: #202027;
+  border: 1px solid #383842;
+  border-radius: 8px;
+}
+
+.watch-actions button {
+  cursor: pointer;
+}
+
+.watch-actions button:hover:not(:disabled) {
+  border-color: #e9408a;
+}
+
+.watch-actions button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.watch-sidebar {
+  padding: 20px;
+  align-self: start;
+  background: #111116;
+  border: 1px solid #282831;
+  border-radius: 12px;
+}
+
+.watch-sidebar h2 {
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+
+.watch-footer {
+  padding: 28px 5%;
+  text-align: center;
+  border-top: 1px solid #25252c;
+  color: #9999a5;
+}
+
+.watch-footer a {
+  color: #f05a9c;
+  font-weight: 700;
+}
+
+@media (max-width: 800px) {
+  .watch-content {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 22px 5% 40px;
+  }
+
+  .watch-player-shell {
+    aspect-ratio: 16 / 9;
+  }
+
+  .watch-actions {
+    align-items: stretch;
+  }
+
+  .watch-actions select,
+  .watch-actions button {
+    flex: 1 1 140px;
+  }
+}
